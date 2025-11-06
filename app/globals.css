@@ -1,0 +1,97 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.button {
+  appearance: none;
+  border: 1px solid #0ea5e9;
+  background: #0284c7;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button.secondary {
+  background: #fff;
+  color: #0ea5e9;
+}
+.button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.input, .textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+  font: inherit;
+}
+.textarea { min-height: 120px; }
+
+.drop {
+  border: 2px dashed #94a3b8;
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  color: #475569;
+  background: #f1f5f9;
+}
+.drop.dragover { border-color: #0284c7; background: #e0f2fe; }
+
+.kv {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 8px 12px;
+}
+.kv dt { color: #475569; }
+.kv dd { margin: 0; font-weight: 600; }
+
+.small { font-size: 12px; color: #475569; }
+
+.tree { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; }
+.tree .line { display: flex; align-items: center; gap: 8px; }
+.tree .toggle { width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #94a3b8; border-radius: 4px; background: #f8fafc; cursor: pointer; }
+.tree .key { color: #0ea5e9; }
+.tree .type { color: #64748b; }
+.tree .value { color: #111827; word-break: break-word; }
+.highlight { background: #fde68a; }
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
